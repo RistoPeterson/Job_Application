@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+  <style>
+    body {
+      background-image: url("../static/img/pic1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<h1 class="mt-4 mb-4 text-white">About us</h1>
+
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="mb5 text-white">Our story</h4>
+        <p class="text-white">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
+        by injected humour, or randomised words which don't look even slightly believable.</p>
+    </div>
+    <div class="col-md-6">
+        <img src="../static/img/fairytale.png" alt="Story" class="img-fluid float-end" width="150px" height="150px">
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+       <img src="../static/img/target.png" alt="Mission" class="img-fluid float-start " width="150px" height="150px">
+    </div>
+    <div class="col-md-6 mb-5">
+        <h4 class="mb5 text-white">Our mission</h4>
+        <p class="text-white">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
+        by injected humour, or randomised words which don't look even slightly believable.</p>
+    </div>
+  </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <h1 class="text-center text-white">Team members</h1>
+        <div class="col mt-5 mb-5">
+           <div class="text-center">
+                <img src="../static/img/user.png" alt="user" class="img-fluid" width="100px" height="100px">
+           </div>
+           <h4 class="text-white text-center mt-3">Risto Peterson</h4>
+           <h6 class="text-white text-center">CEO</h6>
+           <p class="text-white text-center">risto@jobapp.com</p>
+        </div>
+        <div class="col mt-5 mb-5">
+           <div class="text-center">
+                <img src="../static/img/user.png" alt="user" class="img-fluid" width="100px" height="100px">
+           </div>
+           <h4 class="text-white text-center mt-3">Joosep Võrno</h4>
+           <h6 class="text-white text-center">Project manager</h6>
+           <p class="text-white text-center">joosep@jobapp.com</p>
+        </div>
+        <div class="col mt-5 mb-5">
+           <div class="text-center">
+                <img src="../static/img/user.png" alt="user" class="img-fluid" width="100px" height="100px">
+           </div>
+           <h4 class="text-white text-center mt-3">Inna Hot</h4>
+           <h6 class="text-white text-center">Marketing</h6>
+           <p class="text-white text-center">inna@jobapp.com</p>
+        </div>
+   </div>
+</div>
+
+{% endblock %}

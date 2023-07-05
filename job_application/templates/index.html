@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <style>
+        body {
+        background-image: url("../static/img/pic1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+    </style>
+</head>
+
+<h1 class="mt-4 mb-4 text-white">Job Application Form</h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group mb-4 text-white">
+        <label for="first_name">First Name:</label>
+        <input class="form-control" type="text" id="first_name" name="first_name" required>
+    </div>
+    <div class="form-group mb-4 text-white">
+        <label for="last_name">Last Name:</label>
+        <input class="form-control" type="text" id="last_name" name="last_name" required>
+    </div>
+    <div class="form-group mb-4 text-white">
+        <label for="email">Email:</label>
+        <input class="form-control" type="text" id="email" name="email" required>
+    </div>
+    <div class="form-group mb-4 text-white">
+        <label for="date">Available start date:</label>
+        <input class="form-control" type="date" id="date" name="date" required>
+    </div>
+    <div class="form-group mb-4 text-white">
+        <label>Current occupation: </label>
+        <br>
+        <div class="btn-group-vertical" id="occupation">
+            <input class="btn-check form-check-input" type="radio" id="employed" name="occupation" value="employed" required>
+            <label class="btn btn-outline-light" for="employed">Employed</label>
+
+            <input class="btn-check form-check-input" type="radio" id="unemployed" name="occupation" value="unemployed" required>
+            <label class="btn btn-outline-light" for="unemployed">Unemployed</label>
+
+            <input class="btn-check form-check-input" type="radio" id="self-employed" name="occupation" value="self-employed" required>
+            <label class="btn btn-outline-light" for="self-employed">Self-Employed</label>
+
+            <input class="btn-check form-check-input" type="radio" id="student" name="occupation" value="student" required>
+            <label class="btn btn-outline-light" for="student">Student</label>
+        </div>
+    </div>
+    <button class="btn btn-info mb-4 text-white btn-lg" type="submit">Submit</button>
+    {% if messages %}
+    <div class="alert alert-success text-white">
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    </div>
+    {% endif %}
+</form>
+
+{% endblock %}
